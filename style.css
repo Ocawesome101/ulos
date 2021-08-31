@@ -32,3 +32,15 @@ body {
 .magenta { color: #f5f }
 .brightcyan { color: #5ff }
 .brightwhite { color: #fff }
+
+.blink {
+  animation: blink 1s infinite
+}
+
+@keyframes blink {
+  0% { background: #fff }
+  49% { background: #fff }
+  50% { background: #333 }
+  99% { background: #333 }
+  100% { background: #fff }
+}
