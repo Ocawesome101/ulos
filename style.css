@@ -6,10 +6,29 @@ h1 {
   color: #fff
 }
 a {
-  color: #5555ff
+  color: #5555ff;
+  text-decoration: none
 }
 body {
   font-family: "unscii",monospace;
   background-color: #000;
   color: #aaa;
 }
+
+/* the 16 VT100 colors */
+.red { color: #a00 }
+.green { color: #0a0 }
+.brown { color: #a50 }
+.blue { color: #00a }
+.purple { color: #a0a }
+.cyan { color: #0aa }
+.white { color: #aaa}
+
+.darkgray { color: #555 }
+.brightred { color: #f55 }
+.brightgreen { color: #5f5 }
+.yellow { color: #ff5 }
+.brightblue { color: #55f }
+.magenta { color: #f5f }
+.brightcyan { color: #5ff }
+.brightwhite { color: #fff }
