@@ -1,0 +1,9 @@
+%{#{./logo.png}
+*brightwhite{THE CYNOSURE KERNEL}
+  Cynosure is a versatile, pre-emptively multitasked kernel for OpenComputers and the core of @ULOS{../index.html}.}
+%{*brightwhite{WHY CYNOSURE?}
+    - Cynosure's VT100 emulator is the fastest ever written for OpenComputers, beating OpenOS's VT100 emulation in both performance and compatibility.
+    - Cynosure features a nearly complete reimplementation of the Lua standard library, allowing you to get off the ground faster.
+    - Cynosure wraps the *code{load()} function to allow full pre-emptive multitasking.}
+%{*brightwhite{SOURCE CODE}
+  Cynosure's source code is located at @https://github.com/ocawesome101/oc-cynosure{https://github.com/ocawesome101/oc-cynosure}.}

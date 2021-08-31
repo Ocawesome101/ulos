@@ -33,6 +33,8 @@ body {
 .brightcyan { color: #5ff }
 .brightwhite { color: #fff }
 
+.code { background: #333; color: #fff }
+
 .blink {
   animation: blink 1s infinite
 }
