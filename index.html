@@ -14,13 +14,32 @@
     Manual pages are available at <a href="https://oz-craft.pickardayune.com/man/ulos">this link</a>.</p>
     <p><span class="brightwhite">WHY ULOS?</span><br>
     &nbsp;&nbsp;<span class="cyan">ULOS</span> provides a polished Unix-like experience with a solid, well-tested kernel and a reliable package manager.  It features heavy kernel-user separation with a simple yet effective security policy.<br><br>
-    &nbsp;&nbsp;At the core of ULOS, the Cynosure kernel's VT100 emulator is the fastest ever written for OpenComputers[1].  Cynosure also features 
+    &nbsp;&nbsp;At the core of <span class="cyan">ULOS</span>, the Cynosure kernel's VT100 emulator is the fastest ever written for OpenComputers[1].  Cynosure also features extensive security measures such as:<br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- Strict separation and sandboxing of userspace from kernel space;
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;- Full permissions support for many critical aspects of the system;
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;- Full multi-user support with granular per-user permissions;
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;- First-class support for custom filesystems - no more user-level hacks!  Includes support for full POSIX file permissions and ownership.
+    
+    <br><br>&nbsp;&nbsp;Rather than suffer the overhead of two separate filesystems, Cynosure combines the traditional devfs (<span class="yellow">/dev</span>) and procfs (<span class="yellow">/proc</span>) into the sysfs (<span class="yellow">/sys</span>).  Components may be accessed through <span class="yellow">/sys/components</span>.  This eliminates the need for the often-complex APIs found in other systems for terminal access and process management[2].
+
+    <br><br>&nbsp;&nbsp;With the USysD init system, service configuration is easier than ever - and if you prefer, you may return to the Refinement init system simply by installing the 'refinement' package.  Alternatively, thanks to strict separation of init from the kernel, you can write your own init with ease.
+
+    <br><br>&nbsp;&nbsp;<span class="cyan">ULOS</span> runs smoothly on 384K of RAM.  It supports simultaneous access of multiple terminals by multiple users.  Upstream TLE is available for a superb text editing experience - proof that a VT100-based editor with syntax highlighting doesn't have to be slow.
+
+    <br><br>&nbsp;&nbsp;The ULOS Package Manager is a robust, reliable package manager much faster than the OpenPrograms Package Manager.  It seamlessly supports any network protocol supported by the kernel, multiple repositories, package lists... the list goes on.  UPM is even used to set up the system when installing.
+    </p><p>
+      <span class="brightwhite">WHY NOT ULOS?</span><br>
+      &nbsp;&nbsp;ULOS is not currently compatible with any more than the most basic OpenOS programs.
     </p><p>
       <span class="brightwhite">SOURCE CODE</span><br>
       &nbsp;&nbsp;ULOS's source code is located at <a href="https://github.com/ocawesome101/oc-ulos">https://github.com/ocawesome101/oc-ulos</a>.
     </p><p>
       <span class="brightwhite">REPORTING BUGS</span><br>
       &nbsp;&nbsp;Please report bugs at <a href="https://github.com/ocawesome101/oc-ulos/issues">https://github.com/ocawesome101/oc-ulos/issues</a>.
-    </p>
+    </p><p>
+      <span class="brightwhite">FOOTNOTES</span><br>
+      &nbsp;&nbsp;<span class="brightwhite">1</span> This claim was tested with several synthetic benchmarks, in which only raw GPU access beat Cynosure's TTY;  however, it is nearly impossible to create a benchmark that properly mirrors real-world use, so your experience may vary.<br>
+      &nbsp;&nbsp;<span class="brightwhite">2</span> There is still an API for process management, since within OpenComputers there is no good way to spawn processes otherwise, and this way processes may still retrieve more information about themselves;  however, programs like <span class="brightwhite">ps</span>(<span class="brightwhite">1</span>) may be written without the use of this API, simplifying the program implementation.
+    <p>
   </body>
 </html>
