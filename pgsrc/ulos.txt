@@ -1,0 +1,39 @@
+%{<img src="./logo-notext.png" width=18 height=18> *brightwhite{THE UNIX-LIKE OPERATING SYSTEM}}
+%{This is the official website for the Unix-Like Operating System.}
+%{Manual pages are available at @this link{https://oz-craft.pickardayune.com/man/ulos}.}
+%{To install ULOS from an OpenOS medium: *code{&nbsp;<span style="color:#f00">/home#</span> *brightwhite{pastebin run n2PGFdQf}*blink{&nbsp;}&nbsp;}}
+%{To launch a live image from an OpenOS medium: *code{&nbsp;<span style="color:#f00">/home#</span> *brightwhite{pastebin run L7iWx5j7}*blink{&nbsp;}&nbsp;}}
+%{*brightwhite{SYSTEM REQUIREMENTS}
+  Your OpenComputers computer must meet these requirements to run ULOS:
+
+    - A CPU with the *brightwhite{Lua 5.3} architecture;
+    - At least *brightwhite{384KB} of RAM, though *brightwhite{512KB} is recommended;
+    - A hard drive with at least *brightwhite{1MB} of capacity;
+    - At least a *brightwhite{Tier 1} GPU and screen, though *brightcyan{Tier 3} is recommended;
+    - An *yellow{Internet Card} (for installation)}
+%{*brightwhite{WHY ULOS?}
+  *cyan{ULOS} provides a polished Unix-like experience with a solid, well-tested kernel and a reliable package manager.  It features heavy kernel-user separation with a simple yet effective security policy.
+
+  At the core of ULOS, the @Cynosure{./cynosure/index.html} kernel's VT100 emulator is the fastest ever written for OpenComputers[*brightwhite{1}].  Cynosure also features extensive security measures, including:
+
+    - Strict separation and sandboxing of userspace from kernel space;
+    - Full permissions support for many critical aspects of the system;
+    - Full multi-user support with granular per-user permissions;
+    - First-class support for custom filesystems - no more user-level hacks!  Includes support for full POSIX file permissions and ownership.
+
+  Rather than suffer the overhead of two separate filesystems, Cynosure combines the traditional devfs (*yellow{/dev}) and procfs (*yellow{/proc}) into the sysfs (*yellow{/sys}).  Components may be accessed through *yellow{/sys/components}.  This eliminates the need for the often-complex APIs found in other systems for terminal access and retrieval of process information[*brightwhite{2}].
+
+  With the USysD init system, service configuration is easier than ever - and if you prefer, you may return to the Refinement init system simply by installing the *code{refinement} package. Alternatively, thanks to strict separation of init from the kernel, you can write your own init with ease.
+
+  *cyan{ULOS} runs smoothly on 384K of RAM.  It supports simultaneous access of multiple terminals by multiple users.  Upstream @TLE{https://github.com/ocawesome101/tle} is available for a superb text editing experience - proof that a VT100-based editor with syntax highlighting doesn't have to be slow.
+
+  The *brightwhite{ULOS Package Manager} is a robust, reliable package manager much faster than the OpenPrograms Package Manager.  It seamlessly supports any network protocol supported by the kernel, multiple repositories, package lists... the list goes on.  UPM is even used to set up the system when installing.}
+%{*brightwhite{WHY NOT ULOS?}
+  ULOS is not currently compatible with any more than the most basic OpenOS programs.  If you require an OS that runs on anything less than 384K of RAM, ULOS is not right for you.}
+%{*brightwhite{SOURCE CODE}
+  ULOS's source code is located at @https://github.com/ocawesome101/oc-ulos{https://github.com/ocawesome101/oc-ulos}.}
+%{*brightwhite{REPORTING BUGS}
+  Please report bugs at @https://github.com/ocawesome101/oc-ulos/issues{https://github.com/ocawesome101/oc-ulos/issues}.}
+%{*brightwhite{FOOTNOTES
+  1} This claim was tested with several synthetic benchmarks, in which only raw GPU access beat Cynosure's TTY; however, it is nearly impossible to create a benchmark that properly mirrors real-world use, so your experience may vary.
+  *brightwhite{2} There is still an API for process management, since within OpenComputers there is no good way to spawn processes otherwise, and this way processes may still retrieve more information about themselves; however, programs like *brightwhite{ps}(*brightwhite{1}) may be written without the use of this API, simplifying program implementation.}
