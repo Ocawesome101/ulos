@@ -1,9 +1,17 @@
-%{#{./logo.png}
-*brightwhite{THE CYNOSURE KERNEL}
-  Cynosure is a versatile, pre-emptively multitasked kernel for OpenComputers and the core of @ULOS{../index.html}.}
+%{<img src="./logo.png" width=18 height=18> *brightwhite{THE CYNOSURE KERNEL}}
+%{Cynosure is a versatile, pre-emptively multitasked kernel for OpenComputers and the core of @ULOS{../index.html}.}
 %{*brightwhite{WHY CYNOSURE?}
     - Cynosure's VT100 emulator is the fastest ever written for OpenComputers, beating OpenOS's VT100 emulation in both performance and compatibility.
-    - Cynosure features a nearly complete reimplementation of the Lua standard library, allowing you to get off the ground faster.
-    - Cynosure wraps the *code{load()} function to allow full pre-emptive multitasking.}
+    - A nearly complete reimplementation of the Lua standard library (minus io.popen and io.tmpfile), getting you off the ground faster and better.
+    - Cynosure wraps the *code{load()} function to allow partial pre-emptive multitasking.
+    - Full multi-user support  complete with granular permissions for component access, filesystem mounts, user management, and more.
+    - Transparent support for multiple network protocols through the *code{network} API; pass in a URL and the rest is done for you.
+    - Robust filesystem API built from the ground up for speed and simplicity.
+    - First-class support for custom partition tables and filesystems on unmanaged drives.
+    - Support for multiple TTYs on the same computer (one per GPU/screen combo)}
 %{*brightwhite{SOURCE CODE}
   Cynosure's source code is located at @https://github.com/ocawesome101/oc-cynosure{https://github.com/ocawesome101/oc-cynosure}.}
+%{*brightwhite{COPYRIGHT}
+  Cynosure is copyright (c) 2021 Ocawesome101 under the DSLv2.}
+%{*brightwhite{REPORTING BUGS}
+  Bugs should be reported at @https://github.com/ocawesome101/oc-cynosure/issues{https://github.com/ocawesome101/oc-cynosure/issues}.}
