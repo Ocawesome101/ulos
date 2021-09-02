@@ -1,4 +1,4 @@
-%{&lt; @Main{../..} | @ULOS{..} | *brightwhite(Cynosure) &gt;}
+%{&lt; @Main{../..} | @ULOS{../} | *brightwhite{Cynosure} &gt;}
 %{<img src="./logo.png" width=18 height=18> *brightwhite{THE CYNOSURE KERNEL}}
 %{Cynosure is a versatile, pre-emptively multitasked kernel for OpenComputers and the core of @ULOS{../index.html}.}
 %{*brightwhite{WHY CYNOSURE?}
