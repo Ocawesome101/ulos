@@ -2,7 +2,6 @@
 %{<img src="./logo-notext.png" width=18 height=18> *brightwhite{THE UNIX-LIKE OPERATING SYSTEM}}
 %{This is the official website for the Unix-Like Operating System.}
 %{Manual pages are available at @this link{https://oz-craft.pickardayune.com/man/ulos}.}
-%{To install ULOS from an OpenOS medium: *code{&nbsp;<span style="color:#f00">/home#</span> *brightwhite{pastebin run n2PGFdQf}*blink{&nbsp;}&nbsp;}}
 %{To launch a live image from an OpenOS medium: *code{&nbsp;<span style="color:#f00">/home#</span> *brightwhite{pastebin run L7iWx5j7}*blink{&nbsp;}&nbsp;}}
 %{*brightwhite{SYSTEM REQUIREMENTS}
   Your OpenComputers computer must meet these requirements to run ULOS:
